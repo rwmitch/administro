@@ -3,11 +3,7 @@ const client = new Discord.Client();
 client.config = require("./config.json");
 const fs = require("file-system");
 const Enmap = require("enmap");
-client.guildConfs = new Enmap({
-  name: "settings",
-  autoFetch: true,
-  fetchAll: false
-});
+client.guildConfs = new Enmap({name: "settings"});
 
 client.on("guildCreate", guild => {
   client.guildConfs.set(guild.id, client.config.defaultSettings);
