@@ -11,7 +11,7 @@ client.on("message", msg => {
   client.args = msg.content.slice(client.config.prefix.length).trim().split(/ +/g);
   client.cmd = client.args.shift().toLowerCase();
 
-  if (msg.content.startsWith(client.config.prefix)) {
+  if (msg.content.startsWith(client.config.prefix) && msg.guild != null) {
     if (client.config.cmds.includes(client.cmd)) {
       var cmdFile = require("cmds/" + client.cmd + ".js");
       cmdFile.run(client, msg);
