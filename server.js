@@ -3,12 +3,12 @@ const client = new Discord.Client();
 client.config = require("./config.json");
 const fs = require("file-system");
 require("dotenv").config();
-// const Enmap = require("enmap");
-// client.guildConfs = new Enmap({name: "settings"});
+const Enmap = require("enmap");
+client.guildConfs = new Enmap({name: "settings"});
 
-// client.on("guildCreate", guild => {
-//   client.guildConfs.set(guild.id, client.config.defaultSettings);
-// });
+client.on("guildCreate", guild => {
+  client.guildConfs.set(guild.id, client.config.defaultSettings);
+});
 
 client.on("ready", () => {
   console.log("Discord bot up");
