@@ -1,5 +1,11 @@
 {
   "prefix": "£",
   "owner": "316481356060426241",
-  "cmds": ["help", "reload", "status", "avatar", "nick", "admin", "poll", "invite"]
+  "cmds": ["help", "reload", "status", "avatar", "nick", "admin", "poll", "invite"],
+  "defaultSettings": {
+    "prefix": "£",
+    "welcomeChannel": "welcome",
+    "logChannel": "log",
+    "welcomeMsg": "Welcome, $[user]"
+  }
 }
