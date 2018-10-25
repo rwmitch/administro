@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 client.config = require("./config.json");
 const fs = require("file-system");
+require("dotenv").config();
 // const Enmap = require("enmap");
 // client.guildConfs = new Enmap({name: "settings"});
 
